@@ -1,0 +1,12 @@
+apiVersion: stable.example.com/v1
+kind: MyCr
+metadata:
+  labels:
+    app.kubernetes.io/name: mycr
+    app.kubernetes.io/instance: mycr-sample
+    app.kubernetes.io/part-of: commento-11-05
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: commento-11-05
+  name: mycr-sample
+spec:
+  # TODO(user): Add fields here

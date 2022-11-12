@@ -1,0 +1,39 @@
+package: .
+import:
+- package: github.com/hkpark130/commento-11-05
+  subpackages:
+  - api/v1
+  - controllers
+- package: github.com/pkg/errors
+  version: v0.9.1
+- package: k8s.io/api
+  version: v0.26.0-beta.0
+  subpackages:
+  - apps/v1
+- package: k8s.io/apimachinery
+  version: v0.26.0-beta.0
+  subpackages:
+  - pkg/apis/meta/v1
+  - pkg/runtime
+  - pkg/runtime/schema
+  - pkg/util/runtime
+- package: k8s.io/client-go
+  version: v12.0.0
+  subpackages:
+  - kubernetes/scheme
+  - plugin/pkg/client/auth
+- package: sigs.k8s.io/controller-runtime
+  version: v0.13.1
+  subpackages:
+  - pkg/client
+  - pkg/healthz
+  - pkg/log
+  - pkg/log/zap
+  - pkg/scheme
+testImport:
+- package: github.com/onsi/ginkgo
+  version: v2.5.0
+  subpackages:
+  - v2
+- package: github.com/onsi/gomega
+  version: v1.24.1

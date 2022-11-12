@@ -1,0 +1,27 @@
+# permissions for end users to view mycrs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: mycr-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: commento-11-05
+    app.kubernetes.io/part-of: commento-11-05
+    app.kubernetes.io/managed-by: kustomize
+  name: mycr-viewer-role
+rules:
+- apiGroups:
+  - stable.example.com
+  resources:
+  - mycrs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - stable.example.com
+  resources:
+  - mycrs/status
+  verbs:
+  - get

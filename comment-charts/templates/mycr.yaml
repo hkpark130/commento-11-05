@@ -1,0 +1,7 @@
+apiVersion: "stable.example.com/v1"
+kind: MyCr
+metadata:
+  name: my-cr-object
+spec:
+  image: redis:7.0.5
+  replicas: 1
